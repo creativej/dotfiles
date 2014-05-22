@@ -1,0 +1,26 @@
+[user]
+    email = lu.jamison@gmail.com 
+    name = creativej
+[color]
+    ui = auto
+    branch = auto
+    status = auto
+    diff = auto
+[alias]
+    st = status -uall
+    ;graph = log --graph --pretty=oneline --abbrev-commit
+    graph = log --pretty=graphable --graph --date=short          
+    co = checkout
+    su = submodule update
+    pr = pull --rebase
+    amend = commit --amend
+    fbr = !git branch | grep
+    recent = for-each-ref --sort=-committerdate refs/heads/ --count=10 --format='%(refname:short)'
+[merge]
+    summary = true
+[push]
+    default = tracking
+[core]
+	filemode = false
+	editor = /usr/bin/vim
+[pretty]                                                                        	 graphable = %C(yellow)%h%C(red)%d %C(reset)%s %C(green)%an %C(bold black)%cr  

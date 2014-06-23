@@ -128,8 +128,8 @@ noremap <silent> <c-k> :call <SID>swap_down()<CR>
 map <leader>d Yp
 
 " Vundle
-    set rtp+=~/.vim/vundle.git
-    call vundle#rc()
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
     " let Vundle manage Vundle
     " required!
@@ -153,6 +153,10 @@ map <leader>d Yp
         "
         " see :h vundle for more details or wiki for FAQ
         " NOTE: comments after Bundle command are not allowed..
+    " All of your Plugins must be added before the following line
+    call vundle#end()            " required
+    filetype plugin indent on    " required
+
 " CtrlP
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_max_height = 16

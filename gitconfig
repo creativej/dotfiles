@@ -16,10 +16,11 @@
     amend = commit --amend
     fbr = !git branch | grep
     recent = for-each-ref --sort=-committerdate refs/heads/ --count=10 --format='%(refname:short)'
+    br = rev-parse --abbrev-ref HEAD
 [merge]
     summary = true
 [push]
-    default = tracking
+    default = upstream
 [core]
 	filemode = false
 	editor = /usr/bin/vim
